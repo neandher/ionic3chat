@@ -23,7 +23,7 @@ export class UserProvider {
       this.afireauth.auth.createUserWithEmailAndPassword(newuser.email, newuser.password).then(() => {
         this.afireauth.auth.currentUser.updateProfile({
           displayName: newuser.displayName,
-          photoURL: '',
+          photoURL: 'https://firebasestorage.googleapis.com/v0/b/ionic3chat-fedd6.appspot.com/o/chatterplace.png?alt=media&token=1791f6e9-085c-4de2-9a5f-61594df327c3',
         }).then(() => {
           this.firedata.child(this.afireauth.auth.currentUser.uid).set({
             uid: this.afireauth.auth.currentUser.uid,

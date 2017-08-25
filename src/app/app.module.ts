@@ -3,6 +3,9 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import {File} from "@ionic-native/file";
+import {FilePath} from "@ionic-native/file-path";
+import {FileChooser} from "@ionic-native/file-chooser";
 
 import {config} from "./app.firebaseconfig";
 
@@ -12,6 +15,7 @@ import {AngularFireModule} from "angularfire2";
 import { MyApp } from './app.component';
 import { AuthProvider } from '../providers/auth/auth';
 import { UserProvider } from '../providers/user/user';
+import { ImghandlerProvider } from '../providers/imghandler/imghandler';
 
 @NgModule({
   declarations: [
@@ -29,10 +33,14 @@ import { UserProvider } from '../providers/user/user';
   providers: [
     StatusBar,
     SplashScreen,
+    File,
+    FilePath,
+    FileChooser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     AngularFireAuth,
-    UserProvider
+    UserProvider,
+    ImghandlerProvider
   ]
 })
 export class AppModule {}
