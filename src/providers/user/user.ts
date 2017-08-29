@@ -28,7 +28,7 @@ export class UserProvider {
           this.firedata.child(this.afireauth.auth.currentUser.uid).set({
             uid: this.afireauth.auth.currentUser.uid,
             displayName: newuser.displayName,
-            photoUrl: 'https://firebasestorage.googleapis.com/v0/b/ionic3chat-fedd6.appspot.com/o/chatterplace.png?alt=media&token=1791f6e9-085c-4de2-9a5f-61594df327c3'
+            photoURL: 'https://firebasestorage.googleapis.com/v0/b/ionic3chat-fedd6.appspot.com/o/chatterplace.png?alt=media&token=1791f6e9-085c-4de2-9a5f-61594df327c3'
           }).then(() => {
             resolve({success: true});
           }).catch((err) => {
